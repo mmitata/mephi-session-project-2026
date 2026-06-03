@@ -1,0 +1,6 @@
+    1  echo 'Hello from Student: M2551062' > /data/mephi-web/index.html
+    2  curl http://localhost
+    3  curl http://192.168.122.100
+    4  lsblk
+    5  history
+    6  history > ~/history-user

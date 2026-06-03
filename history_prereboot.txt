@@ -1,0 +1,18 @@
+    1  ip a
+    2  nmcli connection show
+    3  nmcli connection modify enp1s0 ipv4.method manual ipv4.address '192.168.122.100/24' ipv4.gateway '192.168.122.1' ipv4.dns '8.8.8.8'
+    4  nmcli connection down enp1s0
+    5  nmcli connection up enp1s0
+    6  nmcli connection show
+    7  ip a
+    8  ip route
+    9  resolvectl status
+   10  hostnamectl --help
+   11  hostnamectl hostname 'mephi-2026.domain.local'
+   12  hostnamectl status
+   13  ping -c 4 8.8.8.8 > /tmp/network_check.txt
+   14  cat /tmp/network_check.txt 
+   15  ping -c 4 192.168.122.1 >> /tmp/network_check.txt 
+   16  cat /tmp/network_check.txt 
+   17  dnf upgrade --refresh
+   18  history > /root/history.tml
